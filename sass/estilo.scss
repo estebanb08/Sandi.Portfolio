@@ -1,0 +1,139 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+// header
+header{
+    background-color: black;
+    padding: 1vw;
+}
+
+#grillaIndexM{
+    background-color: rgb(255, 255, 255);
+}
+.inicioImagen{
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        opacity: 0.5;
+        filter: alpha(opacity=50);
+        zoom: 1; 
+
+      }
+     
+     img:hover {
+        opacity: 1;
+        filter: alpha(opacity=100);
+        zoom: 1;
+      }
+    
+}
+footer{
+    margin-top: 8vw;
+    background-color: blue;
+    height: 10em;
+}
+
+
+#grillaNosotros{
+    #grillaNosotrosM{
+        .sandiImagen{
+            img{
+                padding: 5vw;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cont{
+            align-self: center;
+            text-align: left;
+        }
+
+        .carousel{
+            position: relative;
+            left: 25%;
+            padding: 10vw;
+            background-color: black;
+        }
+    }
+}
+
+@media only screen and (min-width:600px){
+    #grillaIndex{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: "header header header header"
+                "main main main main"
+                "main main main main"
+                "footer footer footer footer";
+
+        header{
+            grid-area: header;
+        }
+        footer{
+            grid-area: footer;
+        }
+
+        #grillaIndexM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 50em 1fr;
+            grid-template-areas: "inicioImagen inicioImagen inicioImagen inicioImagen"
+                                "contenido contenido contenido contenido";
+
+            .inicioImagen{
+                grid-area: inicioImagen;
+            }
+        }
+
+        
+    }
+
+    #grillaNosotros{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: "header header header header"
+                "main main main main"
+                "main main main main"
+                "footer footer footer footer";
+
+        header{
+            grid-area: header;
+        }
+        footer{
+            grid-area: footer;
+        }
+        #grillaNosotrosM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: 40em 1fr;
+            grid-template-areas: "sandi sandi cont cont"
+                                "carousel carousel carousel carousel";
+
+            .sandiImagen{
+                grid-area: sandi;
+            }
+
+            .cont{
+                grid-area: cont;
+            }
+            
+            .carousel{
+                grid-area: carousel;
+            }
+        }
+
+        
+    }
+              
+}
+
+
+
