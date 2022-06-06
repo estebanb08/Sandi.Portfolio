@@ -6,27 +6,80 @@ header {
   background-color: black;
   padding: 1vw; }
 
-#grillaIndexM {
-  background-color: white; }
-
-.inicioImagen img {
-  width: 100%;
-  height: 100%; }
-
-.inicioImagen img {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  zoom: 1; }
-
-.inicioImagen img:hover {
-  opacity: 1;
-  filter: alpha(opacity=100);
-  zoom: 1; }
-
 footer {
   margin-top: 8vw;
-  background-color: blue;
+  background-color: #505060;
   height: 10em; }
+  footer .nav-item img {
+    height: 3em; }
+
+#grillaIndex #grillaIndexM {
+  background-color: white; }
+  #grillaIndex #grillaIndexM .inicioImagen img {
+    width: 100%;
+    height: 100%; }
+  #grillaIndex #grillaIndexM .inicioImagen img {
+    filter: constrast(95%); }
+  #grillaIndex #grillaIndexM div.texto {
+    font-family: 'Charis SIL', serif;
+    text-align: left;
+    font-size: 4.5vw;
+    width: 12em;
+    position: absolute;
+    top: 3.2em;
+    color: #dea82a; }
+  #grillaIndex #grillaIndexM h3 {
+    margin-top: 35%;
+    text-align: center; }
+  #grillaIndex #grillaIndexM .div1 {
+    background-image: url("../images/trabajo1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    margin: 1em;
+    transition: .5s;
+    filter: opacity(70%); }
+    #grillaIndex #grillaIndexM .div1 h3 {
+      transition: .5s; }
+  #grillaIndex #grillaIndexM .div1:hover {
+    transform: scale(96%);
+    filter: opacity(100%);
+    transition: .5s; }
+    #grillaIndex #grillaIndexM .div1:hover h3 {
+      color: white;
+      transition: .5s; }
+  #grillaIndex #grillaIndexM .div2 {
+    background-image: url("../images/trabajo2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    margin: 1em;
+    filter: opacity(70%); }
+    #grillaIndex #grillaIndexM .div2 h3 {
+      transition: .5s; }
+  #grillaIndex #grillaIndexM .div2:hover {
+    transform: scale(96%);
+    filter: opacity(100%);
+    transition: .5s; }
+    #grillaIndex #grillaIndexM .div2:hover h3 {
+      color: white;
+      transition: .5s; }
+  #grillaIndex #grillaIndexM .div3 {
+    background-image: url("../images/trabajo3.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+    margin: 1em;
+    filter: opacity(70%); }
+    #grillaIndex #grillaIndexM .div3 h3 {
+      transition: .5s; }
+  #grillaIndex #grillaIndexM .div3:hover {
+    transform: scale(96%);
+    filter: opacity(100%);
+    transition: .5s; }
+    #grillaIndex #grillaIndexM .div3:hover h3 {
+      color: white;
+      transition: .5s; }
 
 #grillaNosotros #grillaNosotrosM .sandiImagen img {
   padding: 5vw;
@@ -43,6 +96,32 @@ footer {
   padding: 10vw;
   background-color: black; }
 
+#grillaContacto #grillaContactoM .box {
+  align-items: center;
+  text-align: center;
+  background-color: #cb9451;
+  width: 40em;
+  height: 50em; }
+
+#grillaContacto #grillaContactoM .wsp-boton {
+  background-color: #61d261;
+  width: 17em;
+  border-radius: 2em;
+  transition: .5s;
+  transform: scale(100%); }
+  #grillaContacto #grillaContactoM .wsp-boton ul li.nav-item1 {
+    position: relative;
+    top: .3em; }
+  #grillaContacto #grillaContactoM .wsp-boton ul li {
+    padding-top: .7em; }
+    #grillaContacto #grillaContactoM .wsp-boton ul li a p {
+      text-decoration: none; }
+
+#grillaContacto #grillaContactoM .wsp-boton:hover {
+  transition: .5s;
+  transform: scale(103%);
+  background-color: #81e581; }
+
 @media only screen and (min-width: 600px) {
   #grillaIndex {
     display: grid;
@@ -56,11 +135,17 @@ footer {
     #grillaIndex #grillaIndexM {
       grid-area: main;
       display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 50em 1fr;
-      grid-template-areas: "inicioImagen inicioImagen inicioImagen inicioImagen" "contenido contenido contenido contenido"; }
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 50em auto;
+      grid-template-areas: "inicioImagen inicioImagen inicioImagen" "contenido1 contenido2 contenido3"; }
       #grillaIndex #grillaIndexM .inicioImagen {
         grid-area: inicioImagen; }
+      #grillaIndex #grillaIndexM .div1 {
+        grid-area: contenido1; }
+      #grillaIndex #grillaIndexM .div2 {
+        grid-area: contenido2; }
+      #grillaIndex #grillaIndexM .div3 {
+        grid-area: contenido3; }
   #grillaNosotros {
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -81,4 +166,22 @@ footer {
       #grillaNosotros #grillaNosotrosM .cont {
         grid-area: cont; }
       #grillaNosotros #grillaNosotrosM .carousel {
-        grid-area: carousel; } }
+        grid-area: carousel; }
+  #grillaFormulario {
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto 90em auto;
+    grid-template-areas: "header header header header" "main main main main" "main main main main" "footer footer footer footer"; }
+    #grillaFormulario header {
+      grid-area: header; }
+    #grillaFormulario footer {
+      grid-area: footer; }
+    #grillaFormulario #grillaFormularioM {
+      grid-area: main; }
+      #grillaFormulario #grillaFormularioM .formulario {
+        margin-top: 2em;
+        position: absolute; }
+        #grillaFormulario #grillaFormularioM .formulario iframe {
+          width: 110em;
+          height: 80em; } }
