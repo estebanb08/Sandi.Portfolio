@@ -1,20 +1,31 @@
 *{
     margin: 0%;
     padding: 0%;
+
+}
+
+@mixin posicionamiento-items{
+    justify-items: center;
+    align-items: center;
+    text-align: center; 
 }
 
 // header
 header{
-    background-color: black;
     padding: 1vw;
+    background-color: rgb(248, 247, 247);
 }
 
 footer{
     margin-top: 8vw;
     background-color: rgb(80, 80, 96);
     height: 10em;
+    
+
 
     .nav-item{
+        position: relative;
+        left: 40%;
         img{
             height: 3em;
         }
@@ -44,6 +55,12 @@ footer{
                 position: absolute;
                 top: 3.2em;
                 color: rgb(222, 168, 42);
+                ul{
+                    li{
+                        list-style: none;
+                    }
+                }
+                
             }
             h3{
                 margin-top: 35%;
@@ -124,7 +141,7 @@ footer{
         .sandiImagen{
             img{
                 padding: 5vw;
-                width: 100%;
+                width: 90%;
                 height: 100%;
             }
         }
@@ -145,45 +162,127 @@ footer{
 #grillaContacto{
     #grillaContactoM{
         .box{
+            h2{
+                position: relative;
+                top: 2em;
+                margin-bottom: 5em;
+            }
+            margin-top: 5em;
             align-items: center;
             text-align: center;
-            background-color: rgb(203, 148, 81);
-            width: 40em;
-            height: 50em;
+            background-image: url("../images/fondoContacto.jpg");
+            background-size: cover;
+            height: 40em;
+            color: white;
+        }
+        .box2{
+            h2{
+                position: relative;
+                top: 2em;
+                margin-bottom: 5em;
+            }
+            margin-top: 5em;
+            align-items: center;
+            text-align: center;
+            background-color: rgb(209, 169, 83);
+            background-size: cover;
+            height: 40em;
+            color: white;
+
+            ul{
+                position: relative;
+                right: 1em;
+                li{
+                    list-style: none;
+                    font-size: 1.5vw;
+                    padding: 1vw;
+                }
+            }
         }
         .wsp-boton{
-            background-color: rgb(97, 210, 97);
-            width: 17em;
+            margin-bottom: 20%;
+            background-color: rgba(97, 210, 97, 0.752);
+            width: 20em;
+            height: 5em;
             border-radius: 2em;
             transition: .5s;
-            transform: scale(100%);
+            transform: scale(100%); 
+            position: relative;
+            left: 15%;
+            p{
+                color: white;
+            }
             
-            ul{
-                
-                li.nav-item1{
+            ul{ 
+                margin-top: 3em;
+                margin-bottom: 3em;
+                img{
                     position: relative;
-                    top: .3em;
+                    top: 1em;
+                    left: 1.5em;
                     
                 }
                 li{
                     padding-top: .7em;
                     a{
                       p{
+                          position: relative;
+                          top: .5em;
+                          left: 1em;
                         text-decoration: none;  
                     }    
                     }
                               
                 }
             }
+           
         }
         .wsp-boton:hover{
             transition: .5s;
             transform: scale(103%);
-            background-color: rgb(129, 229, 129);
+            background-color: rgba(129, 229, 129, 0.822);
+        }
+
+        .correo{
+            position: relative;
+            left: 15%;
+            background-color: rgba(194, 194, 194, 0.523);
+            border-radius: 1.5em;
+            width: 20em;
+            height: 3em;
+            transition: .5s;
+            transform: scale(100%);
+
+
+           
+            a{
+                text-decoration: none;
+            }
+            p{
+                position: relative;
+                top: .5em;
+                color: white;
+                
+            }
+    }
+
+    .correo:hover{
+        transition: .5s;
+        transform: scale(103%);
+        background-color: rgba(223, 223, 223, 0.705);
+    }
+
+    .caja2{
+        background-color: grey;
+        h2{
+            position: relative;
+            top: 2em;
+            margin-bottom: 5em;
         }
     }
-}
 
+ }
+}
 
 
 
@@ -214,6 +313,8 @@ footer{
 
             .inicioImagen{
                 grid-area: inicioImagen;
+                
+                
             }
 
             .div1{
@@ -274,7 +375,7 @@ footer{
         background-color: gray;
         display: grid;
         grid-template-columns: 25% 25% 25% 25%;
-        grid-template-rows: auto 90em auto;
+        grid-template-rows: auto 90em 20em auto;
         grid-template-areas: "header header header header"
                             "main main main main"
                             "main main main main"
@@ -306,7 +407,245 @@ footer{
         }
 
     }
+
+
+    #grillaContacto{
+        display: grid;
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto 50em auto;
+        grid-template-areas: "header header header header"
+                            "main main main main"
+                            "footer footer footer footer";
+        header{
+            grid-area: header;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+        #grillaContactoM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+            grid-template-rows: auto;
+            grid-template-areas: "mainIzquierda mainIzquierda mainDerecha mainDerecha" ;
+
+            .box{
+                grid-area: mainIzquierda;
+                width: 30em;
+                position: relative;
+                left: 47%;
+            }
+
+            .box2{
+                grid-area: mainDerecha;
+                width: 30em;
+
+            }
+
+                                
+           
+        }
+    }
 }
 
 
 
+@media only screen and (max-width:600px){
+    #grillaIndex{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr 1fr 1fr 1fr auto;
+        grid-template-areas: "header"
+                            "main"
+                            "main"
+                            "main"
+                            "main"
+                            "footer";
+
+        header{
+            grid-area: header;
+        }
+        footer{
+            grid-area: footer;
+        }
+
+        #grillaIndexM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 25em  auto auto auto;
+            grid-template-areas: "inicioImagen"
+                                "contenido1" 
+                                "contenido2" 
+                                "contenido3";
+
+            .inicioImagen{
+                grid-area: inicioImagen;
+                margin-top: 2em;
+                height: 20em;
+            }
+
+            div.texto{
+                position: absolute;
+                width: 100%;
+                top: 16em;
+            }
+
+            .div1{
+                grid-area: contenido1;
+                h3{
+                    position: relative;
+                    top: 2em;
+                }
+            }
+            .div2{
+                grid-area: contenido2;
+                h3{
+                    position: relative;
+                    top: 2em;
+                }
+            }
+            .div3{
+                grid-area: contenido3;
+                h3{
+                    position: relative;
+                    top: 2em;
+                }
+            }
+        }
+
+        
+    }
+
+    #grillaNosotros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-areas: "header"
+                "main"
+                "main"
+                "footer";
+
+        header{
+            grid-area: header;
+        }
+        footer{
+            grid-area: footer;
+        }
+        #grillaNosotrosM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 30em auto 1fr;
+            grid-template-areas: "sandi" 
+                                "cont"
+                                "carousel";
+
+            .sandiImagen{
+                grid-area: sandi;
+                margin-top: 2em;
+                height: 80%;
+                position: relative;
+                left: 1.5em;
+            }
+
+            .cont{
+                grid-area: cont;
+                text-align: center;
+                p{
+                    text-align: justify;
+                    padding: 1em;
+                }
+            }
+            
+            .carousel{
+                grid-area: carousel;
+            }
+        }
+
+        
+    }
+
+    #grillaContacto{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "header"
+                            "main"
+                            "main"
+                            "footer";
+        header{
+            grid-area: header;
+            width: 90%;
+        }
+
+        footer{
+            grid-area: footer;
+            width: 90%;
+        }
+        #grillaContactoM{
+            grid-area: main;
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 50% 50%;
+            grid-template-areas: "mainIzquierda" 
+                                "mainDerecha" ;
+            .box{
+                grid-area: mainIzquierda;
+                width: 30em;
+            }
+
+            .box2{
+                grid-area: mainDerecha;
+                width: 30em;
+                ul{
+                    li{
+                        font-size: 6vw;
+                    }
+                }
+            }
+                        
+
+                                
+           
+        }
+    }
+
+    #grillaFormulario{
+        background-color: gray;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto 120vw auto;
+        grid-template-areas: "header"
+                            "main"
+                            "footer";
+        header{
+            grid-area: header;
+        }
+
+        footer{
+            grid-area: footer;
+        }
+        
+        #grillaFormularioM{
+            grid-area: main;
+
+            .formulario{
+                margin-top:5em;
+                position: absolute;
+                
+                
+                iframe{
+                    width: 30em;
+                    height: 100vw;
+                }
+            }
+
+
+
+        }
+
+    }
+
+}

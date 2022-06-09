@@ -22,32 +22,43 @@
 <body id="grillaNosotros">
     <!-- header -->
     <header>
-        <ul class="nav nav-pills justify-content-end">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../index.html">INICIO</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Contactame</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="contacto/contacto.html">Contacto</a></li>
-                <li><a class="dropdown-item" href="contacto/formulario.html">Formulario</a></li>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../images/iconos/anubis.png" alt="" width=50px>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/nosotros.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contactame
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="../html/contacto/contacto.html">Contacto</a></li>
+                  <li><a class="dropdown-item" href="../html/contacto/formulario.htm">Formulario</a></li>
+                </ul>
+              </li>
             </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="nosotros.html">¿Quien soy?</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-            </li>
-        </ul>
-    </header>
+          </div>
+        </div>
+      </nav>
+  </header>
 <main id="grillaNosotrosM">
     <div class="sandiImagen">
-        <img src="../images/sandi.jpeg" alt="sandi">
+        <img src="../images/trabajo.jpg" alt="sandi">
     </div>
 
     <div class="cont">
-        <h3>¿Quien soy?</h3>
+        <h3>¿Quienes somos?</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero modi quae quis ut, ipsa, pariatur rem quo aspernatur aliquid quod repudiandae minus eum ipsum in placeat fugit earum corrupti magni.</p>
     </div>
 
@@ -73,21 +84,22 @@
         </button>
       </div>
 </main>
-      <footer>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
+<footer>
+  <ul class="nav flex-row ">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="../images/iconos/whatsapp.svg" alt="" width="20px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="../images/iconos/gmail.svg" alt="" width="25px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../index.html">Inicio</a>
+      </li>
+      <li class="nav-item information">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
 
-      </footer>
+
+</footer>
 </html>

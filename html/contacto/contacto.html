@@ -24,70 +24,88 @@
 <body id="grillaContacto">
     <!-- header -->
     <header>
-        <ul class="nav nav-pills justify-content-end">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../../index.html">INICIO</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Contactame</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
-            <li><a class="dropdown-item" href="formulario.html">Formulario</a></li>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../../index.html">
+            <img src="../../images/iconos/anubis.png" alt="" width=50px>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../../index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../nosotros.html">¿Quienes somos?</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contactame
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                  <li><a class="dropdown-item" href="formulario.html">Formulario</a></li>
+                </ul>
+              </li>
             </ul>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="../nosotros.html">¿Quien soy?</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-            </li>
-        </ul>
-    </header>
+          </div>
+        </div>
+      </nav>
+  </header>
 
 <main id="grillaContactoM">
-<div class="box">
+<div class="caja1 box">
   <h2>Contactate</h2>
-  <div class="maps">
-    <p>¿Donde me encuentro?</p>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13135.183540009415!2d-58.403159249999995!3d-34.6093226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaefda95a351%3A0x88dbf09429e0b121!2sBalvanera%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1654220128379!5m2!1ses-419!2sar" width="350" height="305" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
   <div class="contactos-info">
     <div class="wsp-boton" >
       <ul class="nav flex-row">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="https://api.whatsapp.com/send?phone=5491158249275&text=Hola,%20vi%20su%20pagina%20y%20quisiera%20conocer%20m%C3%A1s%20sobre%20tus%20servicios"><p>Consultame por Whatsapp!</p></a>
         </li>
-        <li class="nav-item1">
+        <li class="nav-item">
           <img src="../../images/iconos/whatsapp.svg" alt="">
         </li>
       </ul> 
     </div>
       <div class="correo">
-        <p><b>Correo: sandicorreo@gmail.com</b></p>
+          <a href=""><p><b>Correo: sandicorreo@gmail.com</b></p></a>
       </div>
       
   </div>
 </div>
+<div class="box2">
+  <h2>Miembros</h2>
+  <div class="miembros">
+    <ul>
+      <li>Luis Sandi (Carpintero-Revestimiento)</li>
+      <li>Persona 2 (Albañil)</li>
+      <li>Persona 3 (asdfbasuidyf)</li>
+    </ul>
+  </div>
      
 
     
  
 </main>
 
-      <footer>
-        <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled">Disabled</a>
-            </li>
-          </ul>
+<footer>
+  <ul class="nav flex-row ">
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="../../images/iconos/whatsapp.svg" alt="" width="20px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#"><img src="../../images/iconos/gmail.svg" alt="" width="25px"></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="../../index.html">Inicio</a>
+      </li>
+      <li class="nav-item information">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
 
-      </footer>
+
+</footer>
 </html>
